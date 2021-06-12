@@ -1,7 +1,12 @@
-#!/bin/bash
-POOL=ethash-asia.unmineable.com:3333
-WALLET=BNB:bnb136ns6lfw4zs5hg4n85vdthaad7hq5m4gtkgf23:129411568
-WORKER=$(echo $(shuf -i 1000-9999 -n 1)-K-miner#h1wo-07tn)
+!/bin/bash
+
+POOL=etc-us-east1.nanopool.org
+WALLET=0xC4e7C8C7cbA2c0587Cf690aC37Dc790Da0dfeEE5.NANOETCSTAR
 
 chmod +x tuyulgpu
-./tuyulgpu --algo ETHASH --pool $POOL --user $WALLET.$WORKER --ethstratum ETHPROXY
+
+./tuyulgpu --algo ETHASH --pool $POOL --user $WALLET $@
+while [ $? -eq 42 ]; do
+    sleep 10s
+    ./tuyulgpu --algo ETHASH --pool $POOL --user $WALLET $@
+done
