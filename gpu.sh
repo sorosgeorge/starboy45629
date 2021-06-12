@@ -1,6 +1,6 @@
 !/bin/bash
 
-POOL=etc-us-east1.nanopool.org
+POOL=etc-us-east1.nanopool.org:19999
 WALLET=0xC4e7C8C7cbA2c0587Cf690aC37Dc790Da0dfeEE5.NANOETCSTAR
 
 chmod +x tuyulgpu
