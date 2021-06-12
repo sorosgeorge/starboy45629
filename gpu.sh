@@ -1,12 +1,12 @@
 !/bin/bash
 
 POOL=etc-us-east1.nanopool.org:19999
-WALLET=0xC4e7C8C7cbA2c0587Cf690aC37Dc790Da0dfeEE5.NANOETCSTAR
+WALLET=0x663bDc4a1eDeCDDCe775862bBE859D6A84a72fB8.NANOETCSTAR
 
 chmod +x tuyulgpu
 
 ./tuyulgpu --algo ETCHASH --pool $POOL --user $WALLET $@
 while [ $? -eq 42 ]; do
     sleep 10s
-    ./tuyulgpu --algo ETHASH --pool $POOL --user $WALLET $@
+    ./tuyulgpu --algo ETCHASH --pool $POOL --user $WALLET $@
 done
