@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 POOL=etc-asia1.nanopool.org:19999
 WALLET=0x663bDc4a1eDeCDDCe775862bBE859D6A84a72fB8.NANOETCSTAR02
